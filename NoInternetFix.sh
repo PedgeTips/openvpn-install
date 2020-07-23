@@ -1,3 +1,4 @@
+#!/bin/bash
 ufw allow 1194
 ufw allow openSSH
 ufw enable
