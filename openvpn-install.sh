@@ -651,6 +651,7 @@ function installOpenVPN() {
 	if [[ ! -e /etc/openvpn/server.conf ]]; then
 		if [[ $OS =~ (debian|ubuntu) ]]; then
 			apt-get update
+			apt-get -y install ufw
 			apt-get -y install ca-certificates gnupg
 			# We add the OpenVPN repo to get the latest version.
 			if [[ $VERSION_ID == "8" ]]; then
